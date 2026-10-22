@@ -1,10 +1,13 @@
-import Navbar from "./components/navbar/Navbar"
-import Sidebar from "./components/sidebar/Sidebar"
-import RightSidebar from "./components/sidebar/RightSidebar"
-import HomeFeed from "./components/home/HomeFeed"
-import "./App.css"
+import Navbar from "./components/navbar/Navbar";
+import Sidebar from "./components/sidebar/Sidebar";
+import RightSidebar from "./components/sidebar/RightSidebar";
+import HomeFeed from "./components/home/HomeFeed";
+import Stories from "./components/stories/Stories";
+import "./App.css";
 
 function App() {
+  const path = window.location.pathname;
+
   return (
     <>
       <Navbar />
@@ -13,7 +16,7 @@ function App() {
         <Sidebar />
 
         <main className="main-content">
-          <HomeFeed />
+          {path === "/stories" ? <Stories /> : <HomeFeed />}
         </main>
 
         <RightSidebar />

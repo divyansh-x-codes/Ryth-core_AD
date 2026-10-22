@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./Sidebar.css";
 
 function Sidebar() {
-  const [active, setActive] = useState("HOME");
+  const [active, setActive] = useState(window.location.pathname);
 
   const menu = [
     { name: "HOME", icon: "⌂", link: "/" },
@@ -22,25 +22,25 @@ function Sidebar() {
             href={item.link}
             key={item.name}
             className={
-              active === item.name
+              active === item.link
                 ? "sidebar-item active"
                 : "sidebar-item"
             }
-            onClick={() => setActive(item.name)}
+            onClick={() => setActive(item.link)}
           >
             <span className="sidebar-icon">{item.icon}</span>
+
             <span>{item.name}</span>
 
-            {item.soon && <span className="soon">SOON</span>}
+            {item.soon && (
+              <span className="soon">SOON</span>
+            )}
           </a>
         ))}
       </div>
 
       <div className="club-card">
-        <h3>
-          <span className="club-crown">♛</span>
-          RYTH CLUB+
-        </h3>
+        <h3>👑 RYTH CLUB+</h3>
 
         <p>
           Unlock exclusive groups, live sessions,
