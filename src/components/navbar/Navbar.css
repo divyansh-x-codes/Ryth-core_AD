@@ -1,0 +1,522 @@
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  height: 72px;
+  display: grid;
+  grid-template-columns: 267px minmax(180px, 1fr) 213px 113px 165px;
+  align-items: stretch;
+  position: relative;
+  z-index: 1000;
+  background: #ffffff;
+  color: #172033;
+  border-top: 4px solid #393939;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 22px;
+  min-width: 0;
+  border-right: 1px solid #cbd5e1;
+  text-decoration: none;
+}
+
+.logo-box {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #080808;
+  color: #e7b447;
+  border: 2px solid #333333;
+  border-radius: 10px;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo h2 {
+  margin: 0;
+  color: #111111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.logo h2 span {
+  color: #f4511e;
+}
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.search-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 0 20px;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 638px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 14px;
+  background: #f8fafc;
+  border: 1px solid #cbd8e9;
+  border-radius: 11px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.search-box > span {
+  flex-shrink: 0;
+  color: #647995;
+  font-size: 23px;
+}
+
+.search-box input {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #334155;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.search-box input::placeholder {
+  color: #71819a;
+  opacity: 1;
+}
+
+.search-box kbd {
+  flex-shrink: 0;
+  padding: 4px 7px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #64748b;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   EDITORIAL
+========================= */
+
+.editorial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 0 8px;
+  border-left: 1px solid #cbd5e1;
+  border-right: 1px solid #cbd5e1;
+  color: #172033;
+  text-decoration: none;
+}
+
+.editorial-icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #bfdbfe;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 27px;
+}
+
+.editorial strong,
+.editorial small {
+  display: block;
+  white-space: nowrap;
+}
+
+.editorial strong {
+  margin-bottom: 3px;
+  color: #172033;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.editorial small {
+  color: #71809a;
+  font-size: 11px;
+}
+
+/* =========================
+   WRITE BUTTON
+========================= */
+
+.write {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-right: 1px solid #cbd5e1;
+  color: #172033;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.write:hover {
+  background: #f8fafc;
+}
+
+.write span {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.profile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 10px;
+  border: none;
+  background: #ffffff;
+  color: #172033;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.profile:hover {
+  background: #f8fafc;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.profile strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.arrow {
+  color: #71809a;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+/* =========================
+   PROFILE DROPDOWN
+========================= */
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 8px;
+  width: 262px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  z-index: 2000;
+}
+
+.user-info {
+  padding: 16px 18px 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.user-info strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #172033;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.user-info small {
+  display: block;
+  color: #71809a;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.dropdown a,
+.dropdown .signout {
+  width: 100%;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 11px 18px;
+  border: none;
+  background: #ffffff;
+  color: #334155;
+  font-family: inherit;
+  font-size: 14px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdown a:hover,
+.dropdown .signout:hover {
+  background: #f8fafc;
+}
+
+.dropdown .signout {
+  border-top: 1px solid #e2e8f0;
+  color: #ff4141;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+  .navbar {
+    grid-template-columns:
+      210px minmax(150px, 1fr) 185px 90px 135px;
+  }
+
+  .logo {
+    gap: 8px;
+    padding: 0 12px;
+  }
+
+  .logo h2 {
+    font-size: 22px;
+  }
+
+  .logo-box {
+    width: 38px;
+    height: 38px;
+    font-size: 26px;
+  }
+
+  .search-area {
+    padding: 0 12px;
+  }
+
+  .editorial {
+    gap: 6px;
+    padding: 0 5px;
+  }
+
+  .editorial-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+  }
+
+  .editorial strong {
+    font-size: 12px;
+  }
+
+  .editorial small {
+    font-size: 10px;
+  }
+
+  .write {
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .profile {
+    gap: 6px;
+    padding: 0 6px;
+  }
+
+  .profile strong {
+    font-size: 12px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 720px) {
+  .navbar {
+    height: auto;
+    min-height: 64px;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+  }
+
+  .logo {
+    min-height: 60px;
+    border-right: none;
+  }
+
+  .logo h2 {
+    font-size: 21px;
+  }
+
+  .logo-box {
+    width: 38px;
+    height: 38px;
+  }
+
+  .editorial {
+    display: none;
+  }
+
+  .write {
+    padding: 0 12px;
+    border-right: none;
+  }
+
+  .profile {
+    padding: 0 10px;
+  }
+
+  .search-area {
+    grid-column: 1 / -1;
+    padding: 8px 12px 12px;
+  }
+
+  .search-box {
+    max-width: none;
+    height: 42px;
+  }
+
+  .search-box input {
+    font-size: 13px;
+  }
+
+  .dropdown {
+    right: 6px;
+    width: min(262px, calc(100vw - 16px));
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+  .logo {
+    gap: 7px;
+    padding: 0 8px;
+  }
+
+  .logo h2 {
+    font-size: 19px;
+  }
+
+  .logo-box {
+    width: 34px;
+    height: 34px;
+    font-size: 23px;
+  }
+
+  .write {
+    padding: 0 7px;
+    font-size: 12px;
+  }
+
+  .write span {
+    font-size: 18px;
+  }
+
+  .profile {
+    gap: 5px;
+    padding: 0 6px;
+  }
+
+  .avatar {
+    width: 29px;
+    height: 29px;
+  }
+
+  .profile strong {
+    font-size: 11px;
+  }
+
+  .arrow {
+    font-size: 15px;
+  }
+
+  .search-area {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .search-box {
+    gap: 7px;
+    padding: 0 9px;
+  }
+
+  .search-box input {
+    font-size: 12px;
+  }
+}
