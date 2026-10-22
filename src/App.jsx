@@ -1,8 +1,8 @@
-
-import Navbar from "./components/navbar/Navbar";
-import Sidebar from "./components/sidebar/Sidebar";
-import RightSidebar from "./components/sidebar/RightSidebar";
-import "./App.css";
+import Navbar from "./components/navbar/Navbar"
+import Sidebar from "./components/sidebar/Sidebar"
+import RightSidebar from "./components/sidebar/RightSidebar"
+import HomeFeed from "./components/home/HomeFeed"
+import "./App.css"
 
 function App() {
   return (
@@ -13,8 +13,7 @@ function App() {
         <Sidebar />
 
         <main className="main-content">
-          <h1>Welcome to RythCore</h1>
-          <p>Discover stories, ideas and perspectives.</p>
+          <HomeFeed />
         </main>
 
         <RightSidebar />
