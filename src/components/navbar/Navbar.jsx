@@ -22,7 +22,6 @@ function Navbar() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <kbd>⌘ K</kbd>
         </div>
       </div>
 
