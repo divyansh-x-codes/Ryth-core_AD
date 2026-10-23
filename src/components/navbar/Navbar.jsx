@@ -2,14 +2,23 @@
 import { useState } from "react";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ onNavigate }) {
   const [search, setSearch] = useState("");
   const [open, setOpen] = useState(false);
 
   return (
     <nav className="navbar">
 
-      <a href="/" className="logo">
+      <a
+        href="/"
+        className="logo"
+        onClick={(e) => {
+          if (onNavigate) {
+            e.preventDefault();
+            onNavigate("/");
+          }
+        }}
+      >
         <div className="logo-box">R</div>
         <h2>Ryth<span>Core</span></h2>
       </a>

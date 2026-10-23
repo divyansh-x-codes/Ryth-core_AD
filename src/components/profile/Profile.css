@@ -1,0 +1,392 @@
+
+.profile-page {
+  width: 100%;
+  min-width: 0;
+  color: #111a2e;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.profile-page * {
+  box-sizing: border-box;
+}
+
+.profile-page button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.profile-cover {
+  height: 125px;
+  overflow: hidden;
+}
+
+.profile-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-details {
+  position: relative;
+  padding: 0 28px;
+  border-bottom: 1px solid #dce3ed;
+}
+
+.profile-avatar {
+  width: 125px;
+  height: 125px;
+  margin-top: -65px;
+  position: relative;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  overflow: visible;
+  background: #eef2ff;
+  box-shadow: 0 5px 15px #111a2e20;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-avatar button {
+  position: absolute;
+  right: -2px;
+  bottom: 0;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ccd6e4;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.edit-profile {
+  position: absolute;
+  top: 85px;
+  right: 28px;
+  padding: 10px 15px;
+  border: 1px solid #ccd6e4;
+  border-radius: 7px;
+  background: #fff;
+  color: #111a2e;
+  font-weight: 700;
+}
+
+.profile-details h1 {
+  margin-top: 24px;
+  font-size: 25px;
+  overflow-wrap: anywhere;
+}
+
+.profile-username {
+  margin-top: 8px;
+  color: #687b99;
+  font-size: 14px;
+}
+
+.profile-bio {
+  margin-top: 16px;
+  color: #4a5870;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+  color: #687b99;
+  font-size: 13px;
+}
+
+.profile-info a {
+  color: #2166ff;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 18px 0;
+  border-top: 1px solid #dce3ed;
+  color: #687b99;
+  font-size: 13px;
+}
+
+.profile-stats b {
+  color: #111a2e;
+  font-size: 17px;
+}
+
+.profile-tabs {
+  display: flex;
+  gap: 22px;
+  padding: 0 28px;
+  overflow-x: auto;
+  border-bottom: 1px solid #ccd6e4;
+}
+
+.profile-tab {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  padding: 16px 0;
+  border: none;
+  border-bottom: 3px solid transparent;
+  background: #fff;
+  color: #687b99;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.profile-tab.active {
+  border-bottom-color: #111a2e;
+  color: #111a2e;
+}
+
+.profile-tab span {
+  padding: 3px 6px;
+  border-radius: 12px;
+  background: #f0f3f8;
+  font-size: 10px;
+}
+
+.profile-content {
+  padding: 24px 28px;
+}
+
+.profile-dashboard {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+}
+
+.journey-card,
+.streak-card,
+.recent-stories,
+.profile-section {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #ccd6e4;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.profile-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.profile-card-heading h2,
+.streak-card h2,
+.profile-section h2 {
+  font-size: 18px;
+}
+
+.profile-card-heading p,
+.streak-card > p,
+.profile-section > p {
+  margin-top: 10px;
+  color: #687b99;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.profile-card-heading button {
+  border: none;
+  background: transparent;
+  color: #2166ff;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.profile-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.profile-stat-card {
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #dce3ed;
+  border-radius: 9px;
+}
+
+.profile-stat-card > span {
+  color: #2166ff;
+  font-size: 19px;
+}
+
+.profile-stat-card h3 {
+  margin-top: 8px;
+  font-size: 23px;
+}
+
+.profile-stat-card p {
+  margin-top: 5px;
+  color: #687b99;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.profile-stat-card small {
+  display: block;
+  margin-top: 10px;
+  color: #16a34a;
+  font-size: 11px;
+}
+
+.streak-number {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 28px;
+  color: #687b99;
+  font-size: 14px;
+}
+
+.streak-number strong {
+  color: #111a2e;
+  font-size: 38px;
+}
+
+.streak-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.streak-dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #ccd6e4;
+}
+
+.streak-dots .streak-active {
+  background: #2166ff;
+}
+
+.streak-card .streak-message {
+  margin-top: 32px;
+}
+
+.recent-stories {
+  margin-top: 22px;
+  min-height: 180px;
+}
+
+.empty-stories {
+  padding: 28px 10px 10px;
+  text-align: center;
+}
+
+.empty-stories > span {
+  color: #2166ff;
+  font-size: 30px;
+}
+
+.empty-stories h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.empty-stories p {
+  margin-top: 8px;
+  color: #687b99;
+  font-size: 13px;
+}
+
+.empty-stories button,
+.profile-section button {
+  margin-top: 16px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 7px;
+  background: #111a2e;
+  color: #fff;
+  font-size: 13px;
+}
+
+.profile-section {
+  min-height: 180px;
+}
+
+@media (max-width: 1100px) {
+  .profile-dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-stat-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-cover {
+    height: 100px;
+  }
+
+  .profile-details {
+    padding: 0 16px;
+  }
+
+  .profile-avatar {
+    width: 95px;
+    height: 95px;
+    margin-top: -48px;
+  }
+
+  .profile-details h1 {
+    font-size: 20px;
+    padding-right: 0;
+  }
+
+  .edit-profile {
+    top: 60px;
+    right: 15px;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .profile-info {
+    gap: 12px;
+  }
+
+  .profile-stats {
+    gap: 15px;
+  }
+
+  .profile-tabs {
+    padding: 0 16px;
+    gap: 18px;
+  }
+
+  .profile-content {
+    padding: 16px;
+  }
+
+  .journey-card,
+  .streak-card,
+  .recent-stories,
+  .profile-section {
+    padding: 16px;
+  }
+
+  .profile-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

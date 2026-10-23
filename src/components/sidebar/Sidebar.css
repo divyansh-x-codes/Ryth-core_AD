@@ -1,11 +1,9 @@
 
 .sidebar {
-  width: 260px;
-  min-width: 260px;
-  min-height: calc(100vh - 74px);
-  padding: 29px 23px;
-  display: fixeds;
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 16px;
   background: #ffffff;
   border-right: 1px solid #cbd5e1;
   font-family: Arial, sans-serif;

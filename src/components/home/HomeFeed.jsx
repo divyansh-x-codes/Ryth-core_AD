@@ -1,7 +1,7 @@
 
 import "./HomeFeed.css";
 
-function HomeFeed() {
+function HomeFeed({ onNavigate }) {
   return (
     <div className="home-feed">
 
@@ -18,12 +18,14 @@ function HomeFeed() {
           </h1>
 
           <div className="hero-buttons">
-            <button>Explore Stories →</button>
+            <button onClick={() => onNavigate && onNavigate("/stories")}>
+              Explore Stories →
+            </button>
             <button className="watch-button">▷ Watch Intro</button>
           </div>
 
           <p className="community">
-            👤 👤 👤 👤 👤 &nbsp; 12K+ curious minds are already here
+             &nbsp; 0.0K+ curious minds are already here
           </p>
         </div>
 
@@ -49,12 +51,12 @@ function HomeFeed() {
 
       <article className="feed-article">
         <img
-          src=""
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
           alt="People discussing ideas"
         />
 
         <div className="article-content">
-          <p className="article-ceategory">
+          <p className="article-category">
             Technology · <span>8 min read</span>
           </p>
 
@@ -77,7 +79,7 @@ function HomeFeed() {
 
       <article className="feed-article">
         <img
-          src=""
+          src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80"
           alt="Learning with technology"
         />
 
