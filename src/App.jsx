@@ -4,21 +4,23 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import RightSidebar from "./components/sidebar/RightSidebar";
+
 import HomeFeed from "./components/home/HomeFeed";
 import Stories from "./components/stories/Stories";
 import BookLibrary from "./components/books/BookLibrary";
 import Profile from "./components/profile/Profile";
+import Write from "./components/write/Write";
 
 import "./App.css";
 
 function App() {
   const [currentPath, setCurrentPath] = useState(
-    window.location.pathname || "/"
+    window.location.pathname
   );
 
   useEffect(() => {
     function handleBack() {
-      setCurrentPath(window.location.pathname || "/");
+      setCurrentPath(window.location.pathname);
     }
 
     window.addEventListener("popstate", handleBack);
@@ -36,6 +38,11 @@ function App() {
   const isBooks = currentPath === "/books";
   const isStories = currentPath === "/stories";
   const isProfile = currentPath === "/profile";
+  const isWrite = currentPath === "/write";
+
+  if (isWrite) {
+    return <Write onNavigate={navigate} />;
+  }
 
   return (
     <>
@@ -50,7 +57,11 @@ function App() {
           onNavigate={navigate}
         />
 
-        <main className={`main-content ${isBooks ? "no-padding" : ""}`}>
+        <main
+          className={`main-content ${
+            isBooks ? "no-padding" : ""
+          }`}
+        >
           {isStories ? (
             <Stories onNavigate={navigate} />
           ) : isBooks ? (
@@ -62,7 +73,9 @@ function App() {
           )}
         </main>
 
-        {!isBooks && <RightSidebar onNavigate={navigate} />}
+        {!isBooks && (
+          <RightSidebar onNavigate={navigate} />
+        )}
       </div>
     </>
   );

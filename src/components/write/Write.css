@@ -1,0 +1,387 @@
+
+.write-page {
+  min-height: 100vh;
+  background: #faf8f5;
+  color: #111a2e;
+  font-family: Arial, sans-serif;
+}
+
+.write-page * {
+  box-sizing: border-box;
+}
+
+.write-page button,
+.write-page input,
+.write-page select,
+.write-page textarea {
+  font: inherit;
+}
+
+.write-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  background: white;
+  border-bottom: 1px solid #dce3ed;
+}
+
+.write-topbar > span {
+  color: #687b99;
+  font-size: 13px;
+}
+
+.write-topbar > div {
+  display: flex;
+  gap: 10px;
+}
+
+.write-topbar button {
+  padding: 10px 14px;
+  border: 1px solid #ccd6e4;
+  border-radius: 8px;
+  background: white;
+  color: #111a2e;
+  cursor: pointer;
+}
+
+.write-topbar .publish-button {
+  background: #111a2e;
+  color: white;
+}
+
+.write-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  align-items: start;
+}
+
+.write-editor {
+  min-height: calc(100vh - 55px);
+  margin: 30px;
+  padding: 35px;
+  border: 1px solid #e8e3dc;
+  border-radius: 14px;
+  background: white;
+}
+
+.article-title,
+.article-subtitle {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.article-title {
+  margin-bottom: 22px;
+  color: #111a2e;
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 3vw, 44px);
+}
+
+.article-title::placeholder,
+.article-subtitle::placeholder {
+  color: #a0a8b6;
+}
+
+.article-subtitle {
+  margin-bottom: 35px;
+  font-family: Georgia, serif;
+  font-size: 20px;
+}
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 12px;
+  border: 1px solid #dce3ed;
+  border-radius: 10px;
+  box-shadow: 0 5px 18px #111a2e08;
+}
+
+.editor-toolbar button,
+.editor-toolbar select {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  color: #34435b;
+  cursor: pointer;
+}
+
+.editor-toolbar button:hover {
+  background: #f0f4fa;
+}
+
+.article-content {
+  min-height: 400px;
+  margin-top: 24px;
+  outline: none;
+  font-size: 17px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.article-content:empty::before {
+  content: attr(data-placeholder);
+  color: #a0a8b6;
+  pointer-events: none;
+}
+
+.article-content img {
+  max-width: 100%;
+}
+
+.write-settings {
+  position: sticky;
+  top: 55px;
+  height: calc(100vh - 55px);
+  padding: 22px;
+  overflow-y: auto;
+  background: white;
+  border-left: 1px solid #dce3ed;
+}
+
+.write-settings h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.settings-tabs {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #dce3ed;
+}
+
+.settings-tabs button {
+  padding: 12px 5px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: white;
+  color: #687b99;
+  cursor: pointer;
+}
+
+.settings-tabs button.selected {
+  border-bottom-color: #ff5a1f;
+  color: #ff5a1f;
+}
+
+.write-settings > label,
+.settings-section > label {
+  display: block;
+  margin: 22px 0 10px;
+  color: #34435b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cover-upload {
+  padding: 25px 12px;
+  text-align: center;
+  border: 1px dashed #ccd6e4;
+  border-radius: 12px;
+  background: #fafbfc;
+}
+
+.cover-upload > img {
+  display: block;
+  width: 100%;
+  max-height: 150px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.cover-upload p {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.cover-upload small {
+  display: block;
+  margin-bottom: 15px;
+  color: #687b99;
+  font-size: 11px;
+}
+
+.choose-image {
+  display: inline-block;
+  padding: 9px 14px;
+  border: 1px solid #ccd6e4;
+  border-radius: 7px;
+  background: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.choose-image input {
+  display: none;
+}
+
+.topic-input {
+  display: flex;
+  gap: 6px;
+}
+
+.topic-input input,
+.settings-section input,
+.settings-section textarea,
+.settings-section select {
+  width: 100%;
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #dce3ed;
+  border-radius: 7px;
+  outline-color: #2166ff;
+  background: white;
+}
+
+.topic-input button {
+  padding: 8px;
+  border: 1px solid #ccd6e4;
+  border-radius: 7px;
+  background: white;
+  cursor: pointer;
+}
+
+.topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.topic-list button {
+  padding: 7px 10px;
+  border: 1px solid #e0e5ec;
+  border-radius: 20px;
+  background: #f4f5f7;
+  color: #34435b;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.article-types {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.article-types button {
+  min-width: 0;
+  padding: 15px 5px;
+  border: 1px solid #dce3ed;
+  border-radius: 10px;
+  background: white;
+  color: #34435b;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.article-types button.selected {
+  border: 2px solid #ff5a1f;
+  color: #ff5a1f;
+}
+
+.article-types small {
+  display: block;
+  margin-top: 5px;
+  color: #687b99;
+  font-size: 10px;
+}
+
+.comments-setting {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.comments-setting input {
+  width: 18px;
+  height: 18px;
+  accent-color: #ff5a1f;
+}
+
+.settings-section textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.settings-section p {
+  margin-top: 15px;
+  color: #687b99;
+  font-size: 13px;
+}
+
+.article-preview h1 {
+  margin: 25px 0;
+  font-family: Georgia, serif;
+  font-size: 38px;
+}
+
+.article-preview > img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.article-preview > p {
+  margin-bottom: 25px;
+  color: #687b99;
+  font-size: 18px;
+}
+
+.article-preview > div {
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .write-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .write-settings {
+    position: static;
+    height: auto;
+    border-top: 1px solid #dce3ed;
+    border-left: none;
+  }
+
+  .write-editor {
+    margin: 15px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .write-topbar {
+    padding: 8px;
+    flex-wrap: wrap;
+  }
+
+  .write-topbar button {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .write-editor {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .article-title {
+    font-size: 28px;
+  }
+}
